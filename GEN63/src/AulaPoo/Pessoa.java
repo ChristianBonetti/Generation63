@@ -1,66 +1,88 @@
 package AulaPoo;
 
 public class Pessoa {
-		
-		private String nome;
-		private String endereco;
-		private String cpf;
-		private int telefone;
-		private int idade;
-		
-		public Pessoa(String nome, String endereco, String cpf, int telefone, int idade) {
-			super();
-			this.nome = nome;
-			this.endereco = endereco;
-			this.cpf = cpf;
-			this.telefone = telefone;
-			this.idade = idade;
-		}
 
-		public String getNome() {
-			return nome;
-		}
+	private String nome;
+	private String endereco;
+	private String cpf;
+	private int telefone;
+	private int idade;
+	
+	public Pessoa(String nome, String endereco, String cpf, int telefone, int idade) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.idade = idade;
+	}
+	
+	public Pessoa(String nome, String cpf) {
+		this.nome = nome;
+		this.cpf = cpf;
+	}
 
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
+	public Pessoa() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-		public String getEndereco() {
-			return endereco;
-		}
+	public Pessoa(String nome, String endereco, String cpf) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.cpf = cpf;
+	}
 
-		public void setEndereco(String endereco) {
-			this.endereco = endereco;
-		}
+	public String getNome() {
+		return nome;
+	}
 
-		public String getCpf() {
-			return cpf;
-		}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-		public void setCpf(String cpf) {
-			this.cpf = cpf;
-		}
+	public String getEndereco() {
+		return endereco;
+	}
 
-		public int getTelefone() {
-			return telefone;
-		}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 
-		public void setTelefone(int telefone) {
-			this.telefone = telefone;
-		}
+	public String getCpf() {
+		return cpf;
+	}
 
-		public int getIdade() {
-			return idade;
-		}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-		public void setIdade(int idade) {
-			this.idade = idade;
-		}
-		public void validarCpf() {
-			if(getCpf().length() != 11) {
-				System.out.println("\n--Cpf válido");
-				
-		}
-}
+	public int getTelefone() {
+		return telefone;
+	}
 
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	public void validarCpf() {
+		if(getCpf().length() != 11) {
+			System.out.println("\n--CPF Inválido!!!");
+		}else {
+			System.out.println("\n--CPF Válido!!!");
+		}
+	}
+	
+	
+	
+	
 }

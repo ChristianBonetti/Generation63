@@ -2,17 +2,16 @@ package AulaPoo;
 
 public class Empregado1 extends Pessoa {
 	
-	
 	private int codigoSetor;
 	private float salarioBase;
 	private float imposto;
 	
-	public Empregado1(String nome, String endereco, String cpf, int telefone, int idade, int codigoSetor, float salarioBase, float imposto) {
+	public Empregado1(String nome, String endereco, String cpf, int telefone, int idade, int codigoSetor,
+			float salarioBase, float imposto) {
 		super(nome, endereco, cpf, telefone, idade);
 		this.codigoSetor = codigoSetor;
 		this.salarioBase = salarioBase;
 		this.imposto = imposto;
-		
 	}
 
 	public int getCodigoSetor() {
@@ -39,9 +38,17 @@ public class Empregado1 extends Pessoa {
 		this.imposto = imposto;
 	}
 	
-	public void imprimirinfo() {
-	  System.out.println(("\nNome do empregade: "+getNome()+"\nCPF: "+getCpf()));
-	
+	public void imprimirInfo() {
+		System.out.println("\nNome do empregade: "+getNome()+"\nCPF: "+getCpf()
+	+"\nIdade: "+getIdade()+"\nTelefone: "+getTelefone()+"\nEndereço: "+getEndereco()
+	+"\nCódigo do setor: "+codigoSetor+"\nSalário Base: "+salarioBase+
+	"\nValor em porcentagem (sem o %) do imposto a ser retido do salário: "+imposto);
 	}
 	
+	public void calcularSalario() {
+		double salario_total = salarioBase - (salarioBase * (imposto/100));
+		System.out.println("\nO salário total a ser recebido pelo empregado "+getNome()
+		+" é igual a: "+salario_total);
 	}
+
+}
